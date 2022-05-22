@@ -1,9 +1,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="elementalists.lancedrivers.drivers_app">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
    <application
         android:label="drivers_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+       <service
+           android:name=".java.MyFirebaseMessagingService"
+           android:exported="false">
+           <intent-filter>
+               <action android:name="com.google.firebase.MESSAGING_EVENT" />
+           </intent-filter>
+       </service>
+
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -30,5 +45,7 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyCEBELvMvy9wn_LNYhv8PpK6pNusUFTBTk"/>
     </application>
 </manifest>
