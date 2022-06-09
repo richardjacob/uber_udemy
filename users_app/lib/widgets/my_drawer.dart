@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:users_app/global/constants.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/splashScreen/splash_screen.dart';
 
@@ -21,15 +22,15 @@ class _MyDrawerState extends State<MyDrawer> {
           //drawer header
           Container(
             height: 165,
-            color: Colors.grey,
+            color: kPrimaryColor,
             child: DrawerHeader(
-              decoration: const BoxDecoration(color: Colors.black),
+              decoration: const BoxDecoration(color: kBackgroundColor),
               child: Row(
                 children: [
                   const Icon(
                     Icons.person,
                     size: 80,
-                    color: Colors.grey,
+                    color: kHeadingColor,
                   ),
                   const SizedBox(
                     width: 16,
@@ -41,7 +42,7 @@ class _MyDrawerState extends State<MyDrawer> {
                         widget.name.toString(),
                         style: const TextStyle(
                           fontSize: 16,
-                          color: Colors.grey,
+                          color: kTextColor,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -52,7 +53,7 @@ class _MyDrawerState extends State<MyDrawer> {
                         widget.email.toString(),
                         style: const TextStyle(
                           fontSize: 12,
-                          color: Colors.grey,
+                          color: kTextColor,
                         ),
                       ),
                     ],
@@ -72,11 +73,11 @@ class _MyDrawerState extends State<MyDrawer> {
             child: const ListTile(
               leading: Icon(
                 Icons.history,
-                color: Colors.white54,
+                color: kSecondaryColor,
               ),
               title: Text(
                 "History",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: kTextColor),
               ),
             ),
           ),
@@ -86,11 +87,11 @@ class _MyDrawerState extends State<MyDrawer> {
             child: const ListTile(
               leading: Icon(
                 Icons.person,
-                color: Colors.white54,
+                color: kSecondaryColor,
               ),
               title: Text(
                 "Visit Profile",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: kTextColor),
               ),
             ),
           ),
@@ -100,11 +101,11 @@ class _MyDrawerState extends State<MyDrawer> {
             child: const ListTile(
               leading: Icon(
                 Icons.info,
-                color: Colors.white54,
+                color: kSecondaryColor,
               ),
               title: Text(
                 "About",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: kTextColor),
               ),
             ),
           ),
@@ -118,11 +119,11 @@ class _MyDrawerState extends State<MyDrawer> {
             child: const ListTile(
               leading: Icon(
                 Icons.logout,
-                color: Colors.white54,
+                color: kSecondaryColor,
               ),
               title: Text(
                 "Sign Out",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: kTextColor),
               ),
             ),
           ),

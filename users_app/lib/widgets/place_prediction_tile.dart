@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:users_app/assistants/request_assistant.dart';
+import 'package:users_app/global/constants.dart';
 import 'package:users_app/global/map_key.dart';
 import 'package:users_app/infoHandler/app_info.dart';
 import 'package:users_app/models/directions.dart';
@@ -55,7 +56,7 @@ class PlacePredictionTileDesign extends StatelessWidget {
         getPlaceDirectionDetails(predictedPlaces!.place_id, context);
       },
       style: ElevatedButton.styleFrom(
-        primary: Colors.pinkAccent.shade100,
+        primary: kHeadingColor,
       ),
       child: Padding(
         padding: const EdgeInsets.all(4.0),
@@ -63,7 +64,7 @@ class PlacePredictionTileDesign extends StatelessWidget {
           children: [
             const Icon(
               Icons.add_location,
-              color: Colors.pink,
+              color: kBackgroundColor,
             ),
             const SizedBox(
               width: 14.0,

@@ -39,7 +39,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
   Widget build(BuildContext context) {
     return Material(
       child: Container(
-        color: Colors.black,
+        color: Colors.white,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -50,7 +50,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
                 "Lance App",
                 style: TextStyle(
                     fontSize: 20,
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold),
               )
             ],

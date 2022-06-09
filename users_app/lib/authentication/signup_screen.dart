@@ -3,6 +3,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:users_app/authentication/login_screen.dart';
+import 'package:users_app/global/constants.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/splashScreen/splash_screen.dart';
 import 'package:users_app/widgets/progress_dialog.dart';
@@ -79,7 +80,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: kBackgroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -95,28 +96,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 'Register as a User',
                 style: TextStyle(
                   fontSize: 24,
-                  color: Colors.grey,
+                  color: kSecondaryColor,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               TextField(
                 controller: nameTextEditingController,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: kTextColor),
                 decoration: const InputDecoration(
                   labelText: 'Name',
                   hintText: 'Name',
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kTextColor),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kPrimaryColor),
                   ),
                   hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                 ),
@@ -124,22 +125,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
               TextField(
                 controller: emailTextEditingController,
                 keyboardType: TextInputType.emailAddress,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: kTextColor),
                 decoration: const InputDecoration(
                   labelText: 'Email',
                   hintText: 'Email',
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kTextColor),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kPrimaryColor),
                   ),
                   hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                 ),
@@ -147,22 +148,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
               TextField(
                 controller: phoneTextEditingController,
                 keyboardType: TextInputType.phone,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: kTextColor),
                 decoration: const InputDecoration(
                   labelText: 'Phone',
                   hintText: 'Phone',
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kTextColor),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kPrimaryColor),
                   ),
                   hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                 ),
@@ -171,22 +172,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 controller: passwordTextEditingController,
                 keyboardType: TextInputType.text,
                 obscureText: true,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: kTextColor),
                 decoration: const InputDecoration(
                   labelText: 'Password',
                   hintText: 'Password',
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kTextColor),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kPrimaryColor),
                   ),
                   hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                 ),
@@ -198,12 +199,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 onPressed: () {
                   validateForm();
                 },
-                style:
-                    ElevatedButton.styleFrom(primary: Colors.lightGreenAccent),
+                style: ElevatedButton.styleFrom(primary: kPrimaryColor),
                 child: const Text(
                   'Create Account',
                   style: TextStyle(
-                    color: Colors.black54,
+                    color: kBackgroundColor,
                     fontSize: 18,
                   ),
                 ),

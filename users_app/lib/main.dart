@@ -12,13 +12,10 @@ void main() async {
   runApp(MyApp(
       child: ChangeNotifierProvider(
     create: (context) => AppInfo(),
-    child: MaterialApp(
+    child: const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MySplashScreen(),
+      title: 'Lance User App',
+      home: MySplashScreen(),
     ),
   )));
 }

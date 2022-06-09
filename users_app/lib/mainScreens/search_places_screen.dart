@@ -4,6 +4,8 @@ import 'package:users_app/global/map_key.dart';
 import 'package:users_app/models/predicted_places.dart';
 import 'package:users_app/widgets/place_prediction_tile.dart';
 
+import '../global/constants.dart';
+
 class SearchPlacesScreen extends StatefulWidget {
   @override
   _SearchPlacesScreenState createState() => _SearchPlacesScreenState();
@@ -50,7 +52,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
           Container(
             height: 160,
             decoration: const BoxDecoration(
-              color: Colors.pinkAccent,
+              color: kPrimaryColor,
               boxShadow: [
                 BoxShadow(
                   color: Colors.white54,
