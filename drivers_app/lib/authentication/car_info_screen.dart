@@ -1,3 +1,4 @@
+import 'package:drivers_app/global/constants.dart';
 import 'package:drivers_app/global/global.dart';
 import 'package:drivers_app/splashScreen/splash_screen.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -49,7 +50,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: kBackgroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -65,79 +66,79 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                 'Write your Vehicle Details',
                 style: TextStyle(
                   fontSize: 24,
-                  color: Colors.grey,
+                  color: kPrimaryColor,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               TextField(
                 controller: carModelTextEditingController,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: kTextColor),
                 decoration: const InputDecoration(
                   labelText: 'Vehicle Model',
                   hintText: 'Vehicle Model',
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kTextColor),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kPrimaryColor),
                   ),
                   hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                 ),
               ),
               TextField(
                 controller: carNumberTextEditingController,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: kTextColor),
                 decoration: const InputDecoration(
                   labelText: 'Vehicle Number',
                   hintText: 'Vehicle Number',
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kTextColor),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kPrimaryColor),
                   ),
                   hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                 ),
               ),
               TextField(
                 controller: carColorTextEditingController,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: kTextColor),
                 decoration: const InputDecoration(
                   labelText: 'Vehicle Color',
                   hintText: 'Vehicle Color',
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kTextColor),
                   ),
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
                   ),
                   hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                 ),
               ),
               const SizedBox(height: 10),
               DropdownButton(
-                dropdownColor: Colors.white54,
+                dropdownColor: kBackgroundColor,
                 hint: const Text(
                   "Please choose your Ambulance Type",
                   style: TextStyle(fontSize: 14.0, color: Colors.grey),
@@ -152,7 +153,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                   return DropdownMenuItem(
                     child: Text(
                       car,
-                      style: const TextStyle(color: Colors.grey),
+                      style: const TextStyle(color: kTextColor),
                     ),
                     value: car,
                   );

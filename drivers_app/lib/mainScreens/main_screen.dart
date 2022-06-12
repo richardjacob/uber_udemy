@@ -1,3 +1,4 @@
+import 'package:drivers_app/global/constants.dart';
 import 'package:drivers_app/tabPages/earning_tab.dart';
 import 'package:drivers_app/tabPages/home_tab.dart';
 import 'package:drivers_app/tabPages/profile_tab.dart';
@@ -63,9 +64,9 @@ class _MainScreenState extends State<MainScreen>
             label: "Account",
           ),
         ],
-        unselectedItemColor: Colors.white54,
-        selectedItemColor: Colors.white,
-        backgroundColor: Colors.black,
+        unselectedItemColor: kTextColor,
+        selectedItemColor: kSecondaryColor,
+        backgroundColor: kBackgroundColor,
         type: BottomNavigationBarType.fixed,
         selectedLabelStyle: const TextStyle(fontSize: 14),
         showUnselectedLabels: true,

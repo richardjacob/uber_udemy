@@ -137,7 +137,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
                     setState(() {
                       statusText = "Now Offline";
                       isDriverActive = false;
-                      buttonColor = Colors.grey;
+                      buttonColor = Colors.transparent;
                     });
 
                     //display Toast

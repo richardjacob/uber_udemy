@@ -1,4 +1,5 @@
 import 'package:drivers_app/authentication/signup_screen.dart';
+import 'package:drivers_app/global/constants.dart';
 import 'package:drivers_app/global/global.dart';
 import 'package:drivers_app/splashScreen/splash_screen.dart';
 import 'package:drivers_app/widgets/progress_dialog.dart';
@@ -72,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
+      backgroundColor: kBackgroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -88,29 +89,29 @@ class _LoginScreenState extends State<LoginScreen> {
                 'Login as a Driver',
                 style: TextStyle(
                   fontSize: 24,
-                  color: Colors.grey,
+                  color: kPrimaryColor,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               TextField(
                 controller: emailTextEditingController,
                 keyboardType: TextInputType.emailAddress,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: kTextColor),
                 decoration: const InputDecoration(
                   labelText: 'Email',
                   hintText: 'Email',
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kTextColor),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kPrimaryColor),
                   ),
                   hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                 ),
@@ -119,22 +120,22 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: passwordTextEditingController,
                 keyboardType: TextInputType.text,
                 obscureText: true,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: kTextColor),
                 decoration: const InputDecoration(
                   labelText: 'Password',
                   hintText: 'Password',
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kTextColor),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: kPrimaryColor),
                   ),
                   hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: kTextColor,
                     fontSize: 10,
                   ),
                 ),
@@ -144,12 +145,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   validateForm();
                 },
-                style:
-                    ElevatedButton.styleFrom(primary: Colors.lightGreenAccent),
+                style: ElevatedButton.styleFrom(primary: kPrimaryColor),
                 child: const Text(
                   'Login',
                   style: TextStyle(
-                    color: Colors.black54,
+                    color: kBackgroundColor,
                     fontSize: 18,
                   ),
                 ),
